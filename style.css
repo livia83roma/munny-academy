@@ -263,8 +263,9 @@ textarea{resize:vertical;}
   .nav-links.show{display:flex;}
   .mobile-btn{display:block;}
   .hero h1{font-size:2.2rem;}
-  .hero{min-height:480px;padding:6rem 0 4rem;display:flex;align-items:center;}
-  .hero-overlay{background:rgba(10,20,50,.7);} /* Overlay più uniforme su mobile */
+  .hero{min-height:520px;padding:6rem 0 4rem;display:flex;align-items:center;}
+  .hero-bg-img{object-position: 80% center;} /* Sposta l'inquadratura sulla ragazza a destra */
+  .hero-overlay{background:linear-gradient(to bottom, rgba(10,20,50,0.5), rgba(10,20,50,0.8));} /* Overlay sfumato per leggere meglio il testo */
   .svc-grid{grid-template-columns:1fr;}
   .pricing-grid{grid-template-columns:1fr;}
   .pricing-card.popular{transform:scale(1);}
