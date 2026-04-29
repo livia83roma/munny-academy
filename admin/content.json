@@ -1,0 +1,148 @@
+{
+  "site": {
+    "name": "Munny Academy",
+    "phone": "+39 3283391545",
+    "email": "info@munnyacademy.it",
+    "address": "Roma – Sede Centrale Nord e Sede Storica Sud",
+    "hours": "Lun–Sab: 9:00 – 20:00"
+  },
+  "hero": {
+    "badge": "Centro di Eccellenza a Roma",
+    "title": "Cresci, impara, supera i tuoi limiti",
+    "subtitle": "Dalle ripetizioni scolastiche alle certificazioni linguistiche internazionali. Con Munny Academy hai sempre un supporto personalizzato e insegnanti preparati al tuo fianco, anche online.",
+    "image": "../assets/Progetto senza titolo (9).png",
+    "btn1": "Prenota la tua lezione",
+    "btn2": "I nostri servizi"
+  },
+  "services": [
+    {
+      "id": "s1",
+      "title": "Lezioni Individuali su misura",
+      "description": "Percorsi personalizzati per concentrarsi sulle esigenze specifiche di ogni studente.",
+      "image": "assets/classroom_lesson1.png"
+    },
+    {
+      "id": "s2",
+      "title": "Lezioni di Gruppo Interattive",
+      "description": "Sessioni dinamiche per favorire l'apprendimento collaborativo e la motivazione.",
+      "image": "assets/classroom_lesson2.png"
+    },
+    {
+      "id": "s3",
+      "title": "Lezioni di Lingue Straniere",
+      "description": "Corsi di inglese, spagnolo e francese per tutti i livelli, con insegnanti madrelingua qualificati.",
+      "image": "assets/classroom_lesson.png"
+    },
+    {
+      "id": "s4",
+      "title": "Viaggi Studio",
+      "description": "Trasforma lo studio in esperienza: vivi la lingua all'estero e porta a casa ricordi indimenticabili.",
+      "image": "assets/vacanza studio.png"
+    },
+    {
+      "id": "s5",
+      "title": "Laboratori ed Esperienze Formative",
+      "description": "Laboratori ed esperienze per stimolare curiosità e creatività a qualsiasi età.",
+      "image": "assets/laboratori.jpg"
+    },
+    {
+      "id": "s6",
+      "title": "Certificazioni Linguistiche",
+      "description": "Preparazione alle certificazioni con metodo, pratica e supporto costante per risultati concreti.",
+      "image": "assets/certificazioni.jpg"
+    }
+  ],
+  "gallery": [
+    "assets/sede.png",
+    "assets/classroom_lesson.png",
+    "assets/classroom_lesson1.png",
+    "assets/classroom_lesson2.png",
+    "assets/vacanza studio.png",
+    "assets/center.png"
+  ],
+  "team": [
+    {
+      "id": "t1",
+      "name": "BLAISE",
+      "subjects": "Matematica / Fisica / Elettrotecnica / Inglese / Francese",
+      "bio": "Sono un Tutor qualificato con esperienza nell'insegnamento e preparazione dei ragazzi e adulti per ottenere le certificazioni per la lingua inglese e francese. Offro supporto personalizzato per la conversazione per raggiungere obiettivi concreti e duraturi. Aiuto i ragazzi nelle ripetizioni di fisica e matematica.",
+      "photo": "assets/blaise.png"
+    },
+    {
+      "id": "t2",
+      "name": "LUANA",
+      "subjects": "Matematica",
+      "bio": "Accompagno ragazzi e ragazze delle medie nel loro percorso scolastico con ripetizioni di algebra, aritmetica e geometria. Offro un supporto attento e personalizzato, soprattutto per studenti con DSA, aiutandoli a trovare il loro metodo di studio e a rafforzare fiducia nelle proprie capacità.",
+      "photo": "assets/luana.png"
+    }
+  ],
+  "about": {
+    "image": "assets/sede.png",
+    "title": "Munny Academy: Centro di Eccellenza per Ripetizioni e Lezioni di Lingue a Roma",
+    "sections": [
+      {
+        "heading": "Esperienza e Professionalità al Servizio degli Studenti",
+        "text": "Munny Academy è un centro didattico situato a Roma, dedicato a offrire ripetizioni scolastiche e tutoraggio a studenti di ogni età. Con due sedi facilmente raggiungibili, Munny Academy si distingue per l'impegno nella crescita personale e accademica dei propri allievi. I nostri insegnanti qualificati utilizzano metodi didattici innovativi e personalizzati."
+      },
+      {
+        "heading": "Servizi Personalizzati per Ogni Esigenza",
+        "text": "Offriamo lezioni individuali e di gruppo in diverse materie scolastiche e lingue straniere. La flessibilità oraria e la possibilità di scegliere tra le due sedi permettono agli studenti di organizzare al meglio il proprio percorso di apprendimento, rendendo semplice e veloce l'accesso ai nostri servizi."
+      },
+      {
+        "heading": "Un Centro Dedicato alla Tua Crescita",
+        "text": "Munny Academy non è solo un luogo di studio, ma un ambiente accogliente dove ogni ragazzo può trovare supporto e motivazione. La nostra missione è aiutare a raggiungere i traguardi scolastici e personali, offrendo un percorso formativo su misura per garantire un'esperienza positiva e senza stress, per te e la tua famiglia."
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "id": "r1",
+      "quote": "Professionalità e serietà sono indubitabilmente il fiore all'occhiello di una struttura capace di offrire un servizio di altissima qualità per i nostri ragazzi dai più piccoli ai più grandi, la loro indubbia professionalità li rende meritevoli del più alto apprezzamento.",
+      "author": "Luca"
+    },
+    {
+      "id": "r2",
+      "quote": "Mia figlia ha migliorato enormemente in matematica. Gli insegnanti sono preparati, pazienti e molto professionali. Lo consiglio a tutti i genitori che cercano un supporto serio per i loro figli.",
+      "author": "Maria G."
+    },
+    {
+      "id": "r3",
+      "quote": "Ambiente accogliente e stimolante. Mio figlio non vedeva l'ora di andare alle lezioni. Risultati eccellenti in pochi mesi, siamo molto soddisfatti.",
+      "author": "Roberto F."
+    },
+    {
+      "id": "r4",
+      "quote": "Ottima esperienza per l'inglese. Blaise è un insegnante straordinario, paziente e molto efficace. Mio figlio è stato promosso con ottimo voto!",
+      "author": "Alessandra M."
+    }
+  ],
+  "blog": [
+    {
+      "id": "b1",
+      "category": "Metodo di Studio",
+      "title": "Come concentrarsi durante lo studio pomeridiano",
+      "excerpt": "Scopri la tecnica del pomodoro e organizza il tuo spazio di lavoro per evitare le distrazioni comuni.",
+      "content": "Molti studenti faticano a concentrarsi nel pomeriggio. La tecnica del pomodoro (25 minuti di studio + 5 di pausa) è uno dei metodi più efficaci. Organizza la scrivania, elimina il telefono dalla vista e definisci obiettivi chiari per ogni sessione.",
+      "color": "bg-blue",
+      "date": "2026-04-01"
+    },
+    {
+      "id": "b2",
+      "category": "Lingue",
+      "title": "5 Serie TV per imparare l'Inglese velocemente",
+      "excerpt": "Unire l'utile al dilettevole è il modo migliore per assimilare vocaboli in modo naturale.",
+      "content": "Guardare serie TV in lingua originale con sottotitoli è uno dei modi più efficaci per imparare l'inglese. Ti consigliamo: Friends, The Crown, Black Mirror, Sherlock e Ted Lasso. Inizia con i sottotitoli in italiano, poi passa a quelli in inglese.",
+      "color": "bg-green",
+      "date": "2026-04-10"
+    },
+    {
+      "id": "b3",
+      "category": "Motivazione",
+      "title": "Gestire l'ansia prima delle interrogazioni",
+      "excerpt": "Semplici tecniche di respirazione e un piano di ripasso ben strutturato cambieranno il tuo approccio.",
+      "content": "L'ansia da interrogazione è molto comune. Alcune strategie efficaci: preparare un piano di ripasso con anticipo, fare esercizi di respirazione profonda, dormire bene la notte prima, e ricordare che gli errori fanno parte dell'apprendimento.",
+      "color": "bg-amber",
+      "date": "2026-04-18"
+    }
+  ]
+}

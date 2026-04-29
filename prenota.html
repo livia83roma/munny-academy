@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prenota la tua Lezione | Munny Academy</title>
+  <meta name="description" content="Prenota la tua lezione di ripetizioni o lingua straniera con Munny Academy."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="logo" id="logo-link">
+      <i data-lucide="graduation-cap" class="logo-icon"></i>
+      <span>Munny<span class="logo-accent">Academy</span></span>
+    </a>
+    <button class="mobile-btn" id="mobile-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link" data-page="index">Home</a>
+      <a href="servizi.html" class="nav-link" data-page="servizi">Servizi</a>
+      <a href="team.html" class="nav-link" data-page="team">Team</a>
+      <a href="blog.html" class="nav-link" data-page="blog">Blog</a>
+      <a href="contatti.html" class="nav-link" data-page="contatti">Contattaci</a>
+      <a href="prenota.html" class="btn btn-primary nav-cta">Prenota Ora</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="prenota" class="page-section bg-light">
+  <div class="container">
+    <div class="section-header center">
+      <h2>Prenota la tua Lezione</h2>
+      <p>Il processo è semplice e veloce. Scegli le opzioni e fissa il tuo appuntamento in pochi click.</p>
+    </div>
+    <div class="booking-wrapper">
+      <div class="booking-steps-bar">
+        <div class="bstep active" data-step="1">1. Materia</div>
+        <div class="bstep" data-step="2">2. Dettagli</div>
+        <div class="bstep" data-step="3">3. Riepilogo</div>
+      </div>
+      <form id="booking-form" class="booking-form">
+        <div class="form-step active" id="step-1">
+          <div class="form-group">
+            <label>Ripetizioni o lingue?</label>
+            <select id="book-category" required>
+              <option value="" disabled selected>Seleziona una categoria</option>
+              <option value="school">Ripetizioni Scolastiche</option>
+              <option value="language">Lingue Straniere</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Materia specifica</label>
+            <select id="book-subject" required disabled>
+              <option value="" disabled selected>Prima seleziona una categoria</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Sede</label>
+              <select id="book-location" required>
+                <option value="" disabled selected>Scegli la sede</option>
+                <option value="assarotti">Sede 1: Via Ottavio Assarotti 3, Roma</option>
+                <option value="gnoli">Sede 2: Via Teresa Gnoli 6, Roma</option>
+                <option value="online">Online</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Tipo di lezione</label>
+              <select id="book-type" required>
+                <option value="individual">Individuale</option>
+                <option value="group">Di Gruppo</option>
+              </select>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary next-step w100">Continua <i data-lucide="arrow-right"></i></button>
+        </div>
+        <div class="form-step" id="step-2">
+          <div class="form-group">
+            <label>Insegnante (opzionale)</label>
+            <select id="book-teacher">
+              <option value="any">Qualsiasi insegnante disponibile</option>
+              <option value="blaise">Blaise (Matematica/Fisica/Lingue)</option>
+              <option value="luana">Luana (Matematica)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Data preferita</label>
+              <input type="date" id="book-date" required>
+            </div>
+            <div class="form-group">
+              <label>Fascia oraria</label>
+              <select id="book-time" required>
+                <option value="" disabled selected>Scegli un orario</option>
+                <option value="09:00">09:00 – 10:00</option>
+                <option value="10:00">10:00 – 11:00</option>
+                <option value="15:00">15:00 – 16:00</option>
+                <option value="16:00">16:00 – 17:00</option>
+                <option value="17:00">17:00 – 18:00</option>
+                <option value="18:30">18:30 – 19:30</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-nav">
+            <button type="button" class="btn btn-outline prev-step">Indietro</button>
+            <button type="button" class="btn btn-primary next-step">Continua al pagamento</button>
+          </div>
+        </div>
+        <div class="form-step" id="step-3">
+          <div class="booking-summary">
+            <h4>Riepilogo Prenotazione</h4>
+            <ul id="summary-list"></ul>
+            <div class="summary-total">Totale: <strong>€ 25.00</strong></div>
+          </div>
+          <div class="payment-block">
+            <h4>Dati di Pagamento</h4>
+            <p class="text-muted small">Pagamento sicuro (simulazione)</p>
+            <div class="form-group"><input type="text" placeholder="Numero Carta" required></div>
+            <div class="form-row">
+              <div class="form-group"><input type="text" placeholder="MM/AA" required></div>
+              <div class="form-group"><input type="text" placeholder="CVC" required></div>
+            </div>
+          </div>
+          <div class="form-nav">
+            <button type="button" class="btn btn-outline prev-step">Indietro</button>
+            <button type="submit" class="btn btn-primary">Conferma e Paga</button>
+          </div>
+        </div>
+      </form>
+      <div id="booking-success" class="booking-success hidden">
+        <div class="success-icon"><i data-lucide="check-circle"></i></div>
+        <h3>Prenotazione Confermata!</h3>
+        <p>Grazie per aver scelto Munny Academy. Hai ricevuto i dettagli via email.</p>
+        <a href="index.html" class="btn btn-primary mt-6">Torna alla Home</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo footer-logo"><i data-lucide="graduation-cap"></i><span>Munny<span class="logo-accent">Academy</span></span></div>
+      <p>Il tuo punto di riferimento per l'apprendimento e il successo scolastico.</p>
+    </div>
+    <div class="footer-col"><h4>Link Utili</h4><ul><li><a href="servizi.html">Servizi</a></li><li><a href="team.html">Team</a></li><li><a href="blog.html">Blog</a></li><li><a href="prenota.html">Prenota</a></li></ul></div>
+    <div class="footer-col"><h4>Le Nostre Sedi</h4><ul><li>Sede 1: Via Ottavio Assarotti 3, Roma</li><li>Sede 2: Via Teresa Gnoli 6, Roma</li><li>Lezioni Online disponibili</li></ul></div>
+    <div class="footer-col"><h4>Contatti</h4><ul><li><i data-lucide="phone" class="icon-sm"></i> +39 328 339 1545</li><li><i data-lucide="mail" class="icon-sm"></i> info@munnyacademy.it</li></ul><div class="social-links"><a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a></div></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>&copy; 2026 Munny Academy. Tutti i diritti riservati.</p></div></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

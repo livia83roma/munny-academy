@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Munny Academy – Pannello Admin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css"/>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="login-screen" class="login-screen">
+  <div class="login-box">
+    <div class="login-logo">🎓</div>
+    <h2>Munny Academy</h2>
+    <p>Pannello di controllo — inserisci la password</p>
+    <form id="login-form">
+      <input type="password" id="login-pwd" placeholder="Password" required autocomplete="current-password">
+      <button type="submit" class="btn btn-primary w100">Accedi →</button>
+      <p id="login-error" class="error hidden">❌ Password errata. Riprova.</p>
+    </form>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel" class="admin-panel hidden">
+  <aside class="sidebar">
+    <div class="sidebar-logo">🎓 Munny Admin</div>
+    <nav class="sidebar-nav">
+      <a href="#" class="snav active" data-section="colors">🎨 Colori & Stile</a>
+      <a href="#" class="snav" data-section="hero">🏠 Hero / Home</a>
+      <a href="#" class="snav" data-section="services">📚 Servizi</a>
+      <a href="#" class="snav" data-section="gallery">🖼️ Galleria Foto</a>
+      <a href="#" class="snav" data-section="team">👥 Team</a>
+      <a href="#" class="snav" data-section="about">ℹ️ Chi Siamo</a>
+      <a href="#" class="snav" data-section="blog">📝 Blog</a>
+      <a href="#" class="snav" data-section="testimonials">⭐ Recensioni</a>
+      <a href="#" class="snav" data-section="site">📞 Contatti</a>
+    </nav>
+    <div class="sidebar-actions">
+      <button class="btn btn-primary w100" id="save-btn">💾 Salva Modifiche</button>
+      <a href="/index.html" target="_blank" class="btn btn-outline w100 mt-1">👁 Vedi il Sito</a>
+      <button class="btn btn-ghost w100 mt-1" id="logout-btn">🚪 Esci</button>
+    </div>
+    <div id="save-status" class="save-status-sidebar"></div>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <h1 id="section-title">🎨 Colori & Stile</h1>
+        <p class="topbar-hint" id="section-hint">Cambia i colori principali del sito con un clic</p>
+      </div>
+    </div>
+
+    <!-- ═══ COLORI ═══ -->
+    <div id="section-colors" class="section-panel active">
+      <div class="info-banner">
+        💡 <strong>Come funziona:</strong> Clicca su un colore per aprire il selettore, scegli il nuovo colore, poi premi <strong>💾 Salva Modifiche</strong>. Le modifiche si applicano a tutto il sito automaticamente.
+      </div>
+
+      <div class="colors-grid">
+        <div class="color-swatch-card">
+          <div class="swatch-preview" id="prev-yellow"></div>
+          <div class="swatch-info">
+            <div class="swatch-label">🌟 Colore Principale</div>
+            <div class="swatch-desc">Pulsanti, badge, bordi attivi</div>
+            <div class="swatch-input-row">
+              <input type="color" id="color-yellow" value="#E8B800">
+              <input type="text" id="color-yellow-hex" class="hex-input" value="#E8B800" maxlength="7">
+            </div>
+          </div>
+        </div>
+
+        <div class="color-swatch-card">
+          <div class="swatch-preview" id="prev-dark"></div>
+          <div class="swatch-info">
+            <div class="swatch-label">🌙 Colore Scuro</div>
+            <div class="swatch-desc">Navbar, footer, titoli</div>
+            <div class="swatch-input-row">
+              <input type="color" id="color-dark" value="#1A2744">
+              <input type="text" id="color-dark-hex" class="hex-input" value="#1A2744" maxlength="7">
+            </div>
+          </div>
+        </div>
+
+        <div class="color-swatch-card">
+          <div class="swatch-preview" id="prev-text"></div>
+          <div class="swatch-info">
+            <div class="swatch-label">✍️ Colore Testo</div>
+            <div class="swatch-desc">Testo principale del sito</div>
+            <div class="swatch-input-row">
+              <input type="color" id="color-text" value="#2D3748">
+              <input type="text" id="color-text-hex" class="hex-input" value="#2D3748" maxlength="7">
+            </div>
+          </div>
+        </div>
+
+        <div class="color-swatch-card">
+          <div class="swatch-preview" id="prev-muted"></div>
+          <div class="swatch-info">
+            <div class="swatch-label">💬 Testo Secondario</div>
+            <div class="swatch-desc">Descrizioni, sottotitoli</div>
+            <div class="swatch-input-row">
+              <input type="color" id="color-muted" value="#64748B">
+              <input type="text" id="color-muted-hex" class="hex-input" value="#64748B" maxlength="7">
+            </div>
+          </div>
+        </div>
+
+        <div class="color-swatch-card">
+          <div class="swatch-preview" id="prev-bg"></div>
+          <div class="swatch-info">
+            <div class="swatch-label">🖼️ Sfondo Pagina</div>
+            <div class="swatch-desc">Colore di fondo del sito</div>
+            <div class="swatch-input-row">
+              <input type="color" id="color-bg" value="#ffffff">
+              <input type="text" id="color-bg-hex" class="hex-input" value="#ffffff" maxlength="7">
+            </div>
+          </div>
+        </div>
+
+        <div class="color-swatch-card">
+          <div class="swatch-preview" id="prev-bg-light"></div>
+          <div class="swatch-info">
+            <div class="swatch-label">☁️ Sfondo Sezioni</div>
+            <div class="swatch-desc">Sfondo delle sezioni alternate</div>
+            <div class="swatch-input-row">
+              <input type="color" id="color-bg-light" value="#F5F7FA">
+              <input type="text" id="color-bg-light-hex" class="hex-input" value="#F5F7FA" maxlength="7">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="palette-section">
+        <h3>🎯 Palette Pronte</h3>
+        <p class="hint">Clicca su una palette per applicarla al sito con un clic</p>
+        <div class="palettes-row">
+          <div class="palette-card" data-palette="gold" onclick="applyPalette(this)">
+            <div class="pal-swatches">
+              <span style="background:#E8B800"></span>
+              <span style="background:#1A2744"></span>
+              <span style="background:#2D3748"></span>
+            </div>
+            <div class="pal-name">🌟 Oro Classico</div>
+            <div class="pal-desc">Il design attuale</div>
+          </div>
+          <div class="palette-card" data-palette="emerald" onclick="applyPalette(this)">
+            <div class="pal-swatches">
+              <span style="background:#10B981"></span>
+              <span style="background:#064E3B"></span>
+              <span style="background:#1F2937"></span>
+            </div>
+            <div class="pal-name">🌿 Verde Smeraldo</div>
+            <div class="pal-desc">Fresco e naturale</div>
+          </div>
+          <div class="palette-card" data-palette="royal" onclick="applyPalette(this)">
+            <div class="pal-swatches">
+              <span style="background:#6366F1"></span>
+              <span style="background:#1E1B4B"></span>
+              <span style="background:#1F2937"></span>
+            </div>
+            <div class="pal-name">👑 Viola Royal</div>
+            <div class="pal-desc">Premium e moderno</div>
+          </div>
+          <div class="palette-card" data-palette="coral" onclick="applyPalette(this)">
+            <div class="pal-swatches">
+              <span style="background:#F97316"></span>
+              <span style="background:#7C2D12"></span>
+              <span style="background:#292524"></span>
+            </div>
+            <div class="pal-name">🌅 Arancio Caldo</div>
+            <div class="pal-desc">Energia e creatività</div>
+          </div>
+          <div class="palette-card" data-palette="sky" onclick="applyPalette(this)">
+            <div class="pal-swatches">
+              <span style="background:#0EA5E9"></span>
+              <span style="background:#0C4A6E"></span>
+              <span style="background:#1E293B"></span>
+            </div>
+            <div class="pal-name">🌊 Blu Oceano</div>
+            <div class="pal-desc">Professionale e sereno</div>
+          </div>
+          <div class="palette-card" data-palette="rose" onclick="applyPalette(this)">
+            <div class="pal-swatches">
+              <span style="background:#F43F5E"></span>
+              <span style="background:#4C0519"></span>
+              <span style="background:#1C1917"></span>
+            </div>
+            <div class="pal-name">🌹 Rosa Intenso</div>
+            <div class="pal-desc">Vivace e dinamico</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ HERO ═══ -->
+    <div id="section-hero" class="section-panel">
+      <div class="info-banner">💡 Questa sezione controlla il <strong>banner principale</strong> della homepage — il grande titolo con immagine di sfondo.</div>
+      <div class="panel-grid">
+        <div class="field-group">
+          <label>🏷️ Badge (piccola etichetta in alto)</label>
+          <input type="text" id="hero-badge" placeholder="es. Centro di Eccellenza a Roma">
+        </div>
+        <div class="field-group full">
+          <label>✍️ Titolo principale</label>
+          <input type="text" id="hero-title" placeholder="es. Cresci, impara, supera i tuoi limiti">
+        </div>
+        <div class="field-group full">
+          <label>📝 Sottotitolo / Descrizione</label>
+          <textarea id="hero-subtitle" rows="3" placeholder="Testo descrittivo sotto il titolo..."></textarea>
+        </div>
+        <div class="field-group full">
+          <label>🖼️ Foto di sfondo</label>
+          <div class="upload-zone" id="hero-upload-zone">
+            <img id="hero-img-preview" class="upload-preview" src="" onerror="this.style.display='none'" style="display:none">
+            <div class="upload-placeholder" id="hero-upload-ph">
+              <span>📁</span>
+              <span>Clicca per scegliere una foto</span>
+              <span class="hint">JPG, PNG – consigliata orizzontale (1920×600px)</span>
+            </div>
+            <input type="hidden" id="hero-image">
+            <input type="file" id="hero-image-file" accept="image/*" class="file-input">
+          </div>
+          <button class="btn btn-outline mt-1" onclick="document.getElementById('hero-image-file').click()">📁 Scegli foto di sfondo</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ SERVICES ═══ -->
+    <div id="section-services" class="section-panel">
+      <div class="info-banner">💡 Qui gestisci le <strong>card dei servizi</strong> mostrate in homepage. Puoi modificare titolo, descrizione e foto di ogni servizio.</div>
+      <div id="services-list"></div>
+      <button class="btn btn-outline mt-2" id="add-service-btn">➕ Aggiungi nuovo servizio</button>
+    </div>
+
+    <!-- ═══ GALLERY ═══ -->
+    <div id="section-gallery" class="section-panel">
+      <div class="info-banner">💡 Qui gestisci la <strong>galleria foto</strong> della homepage. Clicca <strong>✕</strong> per rimuovere una foto.</div>
+      <div id="gallery-list" class="gallery-admin-grid"></div>
+      <div class="mt-2">
+        <input type="file" id="gallery-file-input" accept="image/*" multiple class="file-input">
+        <button class="btn btn-outline" onclick="document.getElementById('gallery-file-input').click()">➕ Aggiungi foto alla galleria</button>
+      </div>
+    </div>
+
+    <!-- ═══ TEAM ═══ -->
+    <div id="section-team" class="section-panel">
+      <div class="info-banner">💡 Qui modifichi le <strong>schede del team</strong>: nome, materie insegnate, biografia e foto profilo.</div>
+      <div id="team-list"></div>
+      <button class="btn btn-outline mt-2" id="add-member-btn">➕ Aggiungi membro del team</button>
+    </div>
+
+    <!-- ═══ ABOUT ═══ -->
+    <div id="section-about" class="section-panel">
+      <div class="info-banner">💡 Questa sezione controlla il testo <strong>"Chi Siamo"</strong> nella pagina Team.</div>
+      <div class="panel-grid">
+        <div class="field-group full">
+          <label>✍️ Titolo sezione Chi Siamo</label>
+          <input type="text" id="about-title">
+        </div>
+        <div class="field-group full">
+          <label>🖼️ Foto sezione Chi Siamo</label>
+          <div class="upload-zone" id="about-upload-zone">
+            <img id="about-img-preview" class="upload-preview" src="" onerror="this.style.display='none'" style="display:none">
+            <div class="upload-placeholder" id="about-upload-ph">
+              <span>📁</span>
+              <span>Clicca per scegliere una foto</span>
+            </div>
+            <input type="hidden" id="about-image">
+            <input type="file" id="about-image-file" accept="image/*" class="file-input">
+          </div>
+          <button class="btn btn-outline mt-1" onclick="document.getElementById('about-image-file').click()">📁 Scegli foto</button>
+        </div>
+        <div id="about-sections-list" class="full"></div>
+      </div>
+    </div>
+
+    <!-- ═══ BLOG ═══ -->
+    <div id="section-blog" class="section-panel">
+      <div class="info-banner">💡 Qui gestisci gli <strong>articoli del blog</strong>. Puoi aggiungere, modificare o eliminare articoli.</div>
+      <div id="blog-list"></div>
+      <button class="btn btn-outline mt-2" id="add-post-btn">➕ Nuovo articolo</button>
+    </div>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <div id="section-testimonials" class="section-panel">
+      <div class="info-banner">💡 Qui gestisci le <strong>recensioni dei clienti</strong> mostrate in homepage.</div>
+      <div id="testi-list"></div>
+      <button class="btn btn-outline mt-2" id="add-testi-btn">➕ Aggiungi recensione</button>
+    </div>
+
+    <!-- ═══ SITE INFO ═══ -->
+    <div id="section-site" class="section-panel">
+      <div class="info-banner">💡 Qui modifichi le <strong>informazioni di contatto</strong> mostrate in tutto il sito.</div>
+      <div class="panel-grid">
+        <div class="field-group">
+          <label>🏫 Nome del centro</label>
+          <input type="text" id="site-name">
+        </div>
+        <div class="field-group">
+          <label>📞 Telefono</label>
+          <input type="text" id="site-phone">
+        </div>
+        <div class="field-group">
+          <label>📧 Email</label>
+          <input type="email" id="site-email">
+        </div>
+        <div class="field-group">
+          <label>📍 Indirizzo</label>
+          <input type="text" id="site-address">
+        </div>
+        <div class="field-group">
+          <label>🕐 Orari di apertura</label>
+          <input type="text" id="site-hours">
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

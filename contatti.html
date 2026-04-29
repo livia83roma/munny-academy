@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contattaci | Munny Academy</title>
+  <meta name="description" content="Contatta Munny Academy per informazioni sui nostri corsi di ripetizioni e lingue a Roma."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="index.html" class="logo" id="logo-link">
+      <i data-lucide="graduation-cap" class="logo-icon"></i>
+      <span>Munny<span class="logo-accent">Academy</span></span>
+    </a>
+    <button class="mobile-btn" id="mobile-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html" class="nav-link" data-page="index">Home</a>
+      <a href="servizi.html" class="nav-link" data-page="servizi">Servizi</a>
+      <a href="team.html" class="nav-link" data-page="team">Team</a>
+      <a href="blog.html" class="nav-link" data-page="blog">Blog</a>
+      <a href="contatti.html" class="nav-link" data-page="contatti">Contattaci</a>
+      <a href="prenota.html" class="btn btn-primary nav-cta">Prenota Ora</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section id="contatti" class="page-section bg-light">
+  <div class="container">
+    <div class="section-header center">
+      <h2>Contattaci</h2>
+    </div>
+    <div class="contact-layout centered">
+      <form class="contact-form" id="contact-form">
+        <div class="form-group"><input type="email" placeholder="Indirizzo email *" required></div>
+        <div class="form-group"><input type="text" placeholder="Nome *" required></div>
+        <div class="form-group"><input type="tel" placeholder="Numero di telefono"></div>
+        <div class="form-group"><textarea rows="4" placeholder="Messaggio"></textarea></div>
+        <button type="submit" class="btn btn-primary w100">Contattaci</button>
+      </form>
+    </div>
+
+    <div class="quick-contact center mt-12">
+      <div class="contact-card-simple">
+        <i data-lucide="phone-call" class="icon-lg mb-2"></i>
+        <h3>Preferisci chiamarci?</h3>
+        <p>Siamo a tua disposizione per qualsiasi dubbio o informazione.</p>
+        <a href="tel:+393283391545" class="phone-link">+39 328 339 1545</a>
+      </div>
+    </div>
+
+    <div class="testimonials-section">
+      <div class="section-header center mt-16">
+        <h2>Cosa dicono di noi</h2>
+      </div>
+      <div class="testi-slider">
+        <button class="testi-nav prev" id="testi-prev"><i data-lucide="chevron-left"></i></button>
+        <div class="testi-track" id="testi-track">
+          <div class="testi-slide">
+            <blockquote>"Professionalità e serietà sono indubitabilmente il fiore all'occhiello di una struttura capace di offrire un servizio di altissima qualità per i nostri ragazzi dai più piccoli ai più grandi."</blockquote>
+            <cite>— Luca</cite>
+          </div>
+          <div class="testi-slide">
+            <blockquote>"Mia figlia ha migliorato enormemente in matematica. Gli insegnanti sono preparati, pazienti e molto professionali. Lo consiglio a tutti!"</blockquote>
+            <cite>— Maria G.</cite>
+          </div>
+          <div class="testi-slide">
+            <blockquote>"Ambiente accogliente e stimolante. Mio figlio non vedeva l'ora di andare alle lezioni. Risultati eccellenti in pochi mesi."</blockquote>
+            <cite>— Roberto F.</cite>
+          </div>
+          <div class="testi-slide">
+            <blockquote>"Ottima esperienza per l'inglese. Blaise è un insegnante straordinario, paziente e molto efficace. Promosso con ottimo voto!"</blockquote>
+            <cite>— Alessandra M.</cite>
+          </div>
+        </div>
+        <button class="testi-nav next" id="testi-next"><i data-lucide="chevron-right"></i></button>
+      </div>
+      <div class="testi-dots" id="testi-dots"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo footer-logo"><i data-lucide="graduation-cap"></i><span>Munny<span class="logo-accent">Academy</span></span></div>
+      <p>Il tuo punto di riferimento per l'apprendimento e il successo scolastico.</p>
+    </div>
+    <div class="footer-col"><h4>Link Utili</h4><ul><li><a href="servizi.html">Servizi</a></li><li><a href="team.html">Team</a></li><li><a href="blog.html">Blog</a></li><li><a href="prenota.html">Prenota</a></li></ul></div>
+    <div class="footer-col"><h4>Le Nostre Sedi</h4><ul><li>Sede 1: Via Ottavio Assarotti 3, Roma</li><li>Sede 2: Via Teresa Gnoli 6, Roma</li><li>Lezioni Online disponibili</li></ul></div>
+    <div class="footer-col"><h4>Contatti</h4><ul><li><i data-lucide="phone" class="icon-sm"></i> +39 328 339 1545</li><li><i data-lucide="mail" class="icon-sm"></i> info@munnyacademy.it</li></ul><div class="social-links"><a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a></div></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><p>&copy; 2026 Munny Academy. Tutti i diritti riservati.</p></div></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
