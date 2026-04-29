@@ -263,7 +263,8 @@ textarea{resize:vertical;}
   .nav-links.show{display:flex;}
   .mobile-btn{display:block;}
   .hero h1{font-size:2.2rem;}
-  .hero{height:auto;padding:5rem 0 4rem;}
+  .hero{min-height:480px;padding:6rem 0 4rem;display:flex;align-items:center;}
+  .hero-overlay{background:rgba(10,20,50,.7);} /* Overlay più uniforme su mobile */
   .svc-grid{grid-template-columns:1fr;}
   .pricing-grid{grid-template-columns:1fr;}
   .pricing-card.popular{transform:scale(1);}
